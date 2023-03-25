@@ -1,6 +1,4 @@
 package pt.ulusofona.cm.kotlin.challenge.exceptions
 
 
-class VeiculoNaoEncontradoException(mensagem: String) : Exception(mensagem) {
-
-}
+class VeiculoNaoEncontradoException : Exception("Quando pesquisas por um veículo que uma pessoa não possui.")

@@ -87,7 +87,7 @@ abstract class Veiculo(open val identificador: String) : Movimentavel {
         posicao.alterarPosicaoPara(x, y)
     }
 
-    abstract override fun requerCarta(): Boolean
+    abstract fun requerCarta(): Boolean
 }
 
 class Carta {
