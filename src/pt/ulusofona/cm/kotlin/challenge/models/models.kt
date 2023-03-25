@@ -51,21 +51,20 @@ class Posicao(var x: Int, var y: Int) {
 }
 
 class Motor(val cavalos: Int, val cilindrada: Int) : Ligavel {
-    var ligado = false
+        var ligado = false
 
-    override fun ligar() {
+        override fun ligar() {
         ligado = true
-    }
+        }
 
-    override fun desligar() {
+        override fun desligar() {
         ligado = false
-    }
+        }
 
-    override fun estaLigado(): Boolean {
+        override fun estaLigado(): Boolean {
         return ligado
-    }
-}
-
+        }
+        }
 
 class Carro(override val identificador: String, val motor: Motor) : Veiculo(identificador) {
         override fun requerCarta(): Boolean {
@@ -80,15 +79,15 @@ class Bicicleta(override val identificador: String) : Veiculo(identificador) {
         }
 
 abstract class Veiculo(open val identificador: String) : Movimentavel {
-    var posicao = Posicao(0, 0)
-    var dataDeAquisicao = Date()
+        var posicao = Posicao(0, 0)
+        var dataDeAquisicao = Date()
 
-    override fun moverPara(x: Int, y: Int) {
+        override fun moverPara(x: Int, y: Int) {
         posicao.alterarPosicaoPara(x, y)
-    }
+        }
 
-    abstract fun requerCarta(): Boolean
-}
+abstract fun requerCarta(): Boolean
+        }
 
 class Carta {
     val dataDeEmissao: Date = Date();
