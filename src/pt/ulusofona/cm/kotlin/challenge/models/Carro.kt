@@ -3,7 +3,7 @@ package pt.ulusofona.cm.kotlin.challenge.models
 import pt.ulusofona.cm.kotlin.challenge.interfaces.Ligavel
 import java.text.SimpleDateFormat
 
- abstract class Carro(override val identificador: String, val motor: Motor) : Veiculo(identificador), Ligavel{
+ class Carro(override val identificador: String, val motor: Motor) : Veiculo(identificador), Ligavel{
     override fun requerCarta(): Boolean {
         return true
     }
@@ -16,7 +16,11 @@ import java.text.SimpleDateFormat
         motor.desligar()
     }
 
-    fun estaligado(): Boolean {
+     override fun estaLigado(): Boolean {
+         return motor.estaLigado()
+     }
+
+     fun estaligado(): Boolean {
         return motor.ligado
     }
 
