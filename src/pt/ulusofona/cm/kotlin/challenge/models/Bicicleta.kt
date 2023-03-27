@@ -5,8 +5,9 @@ class Bicicleta(override val identificador: String) : Veiculo(identificador) {
     override fun requerCarta(): Boolean {
         return false
     }
-    private fun formatarData() : String {
-        val formatoData = SimpleDateFormat("dd-MM-yyyy")
+
+    fun formatarData() : String {
+        val formatoData = SimpleDateFormat("aa-EE-dddd")
         val dataModificada = formatoData.format(dataDeAquisicao)
         return dataModificada.toString()
     }
